@@ -13,6 +13,10 @@ module.exports = (sequelize, DataTypes) => {
       User.hasOne(models.Rol,{
         as: "rols",
         foreignKey : "rolId"
+      }),
+      User.belongsTo(models.Reservations,{
+        as: "reservas",
+        foreignKey : "userId"
       })
     }
   }
