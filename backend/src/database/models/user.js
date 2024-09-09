@@ -10,7 +10,7 @@ module.exports = (sequelize, DataTypes) => {
         as: "images",
         foreignKey : "userId"
       }),
-      User.hasOne(models.Rol,{
+      User.belongsTo(models.Rol,{
         as: "rols",
         foreignKey : "rolId"
       }),
@@ -24,7 +24,10 @@ module.exports = (sequelize, DataTypes) => {
     name: DataTypes.STRING,
     email: DataTypes.STRING,
     password: DataTypes.STRING,
-    rolId : DataTypes.INTEGER
+    rolId : {
+      type: DataTypes.INTEGER,
+      defaultValue: 1
+    } 
   }, {
     sequelize,
     modelName: 'User',

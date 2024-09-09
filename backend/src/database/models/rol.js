@@ -7,7 +7,7 @@ module.exports = (sequelize, DataTypes) => {
    
     static associate(models) {
      Rol.associate = (models)=>{
-      Rol.belongsTo(models.User,{
+      Rol.hasMany(models.User,{
         as : "rols",
         foreignKey : "rolId"
       })

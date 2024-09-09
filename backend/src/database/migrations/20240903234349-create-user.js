@@ -22,7 +22,7 @@ module.exports = {
         allowNull : false,
         defaultValue : 1,
         type : Sequelize.INTEGER,
-        reference : {
+        references : {
           model : {
             tableName : "Rols"
           },
