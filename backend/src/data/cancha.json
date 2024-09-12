@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "jugadores": 5
+    },
+    {
+        "id": 2,
+        "jugadores": 7
+    },
+    {
+        "id": 3,
+        "jugadores": 11
+    }
+]

@@ -24,10 +24,15 @@ module.exports = (sequelize, DataTypes) => {
     name: DataTypes.STRING,
     email: DataTypes.STRING,
     password: DataTypes.STRING,
+<<<<<<< HEAD
     rolId : {
       type: DataTypes.INTEGER,
       defaultValue: 1
     } 
+=======
+    rolId : DataTypes.INTEGER,
+    resenasId: DataTypes.INTEGER
+>>>>>>> feature/elias
   }, {
     sequelize,
     modelName: 'User',
