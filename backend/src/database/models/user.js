@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
         as: "rols",
         foreignKey : "rolId"
       }),
-      User.belongsTo(models.Reservations,{
+      User.hasOne(models.Reservations,{
         as: "reservas",
         foreignKey : "userId"
       })
@@ -24,15 +24,11 @@ module.exports = (sequelize, DataTypes) => {
     name: DataTypes.STRING,
     email: DataTypes.STRING,
     password: DataTypes.STRING,
-<<<<<<< HEAD
     rolId : {
       type: DataTypes.INTEGER,
       defaultValue: 1
-    } 
-=======
-    rolId : DataTypes.INTEGER,
-    resenasId: DataTypes.INTEGER
->>>>>>> feature/elias
+    },
+    /* resenasId: DataTypes.INTEGER */
   }, {
     sequelize,
     modelName: 'User',

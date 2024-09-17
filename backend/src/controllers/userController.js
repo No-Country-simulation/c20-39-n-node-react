@@ -14,9 +14,9 @@ module.exports={
     
                 
                 const newUser = await db.User.create({
-                    name : name,
+                    name : name.replace(/ /g, ""),
                     email,
-                    password:bcryptjs.hashSync(password,10)                
+                    password:bcryptjs.hashSync(password.toString(),10)                
                 })
     
                 return res.status(200).json({
@@ -50,12 +50,12 @@ module.exports={
                     {
                     where : {email},
                     attributes :{
-                         exclude : ['createdAt','updatedAt','userId']
+                         exclude : ['createdAt','updatedAt','userId','resenasId']
                         }
                     }
                 )
                 
-                let isOkPass = await bcryptjs.compare(password,userInDb.password)
+                let isOkPass = await bcryptjs.compare(password.toString(),userInDb.password)
     
                 if(userInDb && isOkPass){
                     return res.status(200).json({

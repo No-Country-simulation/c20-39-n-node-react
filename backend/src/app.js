@@ -7,6 +7,7 @@ const logger = require('morgan')
 //routes
 
 const userRoutes = require('./routes/userRoutes')
+const reservasRoutes = require('./routes/reservaRoutes')
 
 
 const app = express()
@@ -17,7 +18,8 @@ app.use(express.urlencoded({extended : false}))
 app.use(cookieParser())
 
 //api
-app.use('/api/users',userRoutes)
+app.use('/api/users',userRoutes),
+app.use('/api/reservation',reservasRoutes)
 
 
 app.use(function(req, res, next) {

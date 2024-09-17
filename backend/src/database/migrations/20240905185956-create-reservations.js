@@ -10,24 +10,40 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       reservation_date: {
+        allowNull: false,
         type: Sequelize.DATE
       },
       start_time: {
-        type: Sequelize.DATE
+        allowNull:false,
+        type: Sequelize.TIME
       },
       end_time: {
-        type: Sequelize.DATE
+        allowNull:false,
+        type: Sequelize.TIME
       },
       userId:{
         allowNull: false,
         type: Sequelize.INTEGER,
-        referece : {
+        references : {
           model:{
             tableName : "Users"
           },
           key : "id"
-        }
-
+        },
+        onUpdate : "CASCADE",
+        onDelete : "CASCADE"
+      },
+      canchasId:{
+        allowNull: false,
+        type : Sequelize.INTEGER,
+        references : {
+          model:{
+            tableName : "Canchas"
+          },
+          key : "id"
+        },
+        onUpdate: "CASCADE",
+        onDelete : "CASCADE"
       },
       createdAt: {
         allowNull: false,

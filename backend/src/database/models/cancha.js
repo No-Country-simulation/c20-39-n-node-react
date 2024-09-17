@@ -11,10 +11,10 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      User.associate = (models)=>{
-        User.hasOne(models.User,{
-          as : "rols",
-          foreignKey : "rolId"
+      Cancha.associate = (models)=>{
+        Cancha.hasToMany(models.Reservations,{
+          as : "canchas",
+          foreignKey : "canchasId"
         })
        }
     }

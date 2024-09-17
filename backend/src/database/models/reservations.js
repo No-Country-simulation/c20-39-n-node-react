@@ -6,9 +6,13 @@ module.exports = (sequelize, DataTypes) => {
   class Reservations extends Model {
     
     static associate(models) {
-      Reservations.hasOne(models.User,{
+      Reservations.belongsTo(models.User,{
         as : "reservas",
         foreignKey : "userId"
+      }),
+      Reservations.hasOne(models.Cancha,{
+        as : "canchas",
+        foreignKey : "canchasId"
       })
     }
   }
@@ -16,7 +20,8 @@ module.exports = (sequelize, DataTypes) => {
     reservation_date: DataTypes.DATE,
     start_time: DataTypes.DATE,
     end_time: DataTypes.DATE,
-    userId : DataTypes.INTEGER
+    userId : DataTypes.INTEGER,
+    canchasId : DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'Reservations',
