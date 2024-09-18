@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ./src/bin/www",
+    "start": "node ./src/app.js",
     "dev": "nodemon ./src/bin/www",
     "db:create": "sequelize db:drop & sequelize db:create & sequelize db:migrate & sequelize db:seed:all",
     "db:reset": "sequelize db:migrate:undo:all & sequelize db:migrate & sequelize db:seed:all"
