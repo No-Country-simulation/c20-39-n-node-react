@@ -1,5 +1,4 @@
-BRANCHS
-    Ejecutar los siguiente comandos, equipo front y QA:
+/ BACKEND : 
 
 <<<<<<< HEAD
 npm init
@@ -13,3 +12,4 @@ Cada rol debe tener su proyecto base en el rol que le corresponda y en su subram
 Luego crear otras subramas ya personales de cada uno dentro del rol que le corresponda.
 ejemplo: git checkout -b elias backend
 >>>>>>> c501e24e26efb26e833f5a878d927f91282e9f67
+ bcrypt
