@@ -58,6 +58,8 @@ module.exports={
                 let isOkPass = await bcryptjs.compare(password.toString(),userInDb.password)
     
                 if(userInDb && isOkPass){
+                    req.session.userLogged = userInDb
+                    
                     return res.status(200).json({
                         ok:true,
                         msg : "Usuario logueado exitosamente",

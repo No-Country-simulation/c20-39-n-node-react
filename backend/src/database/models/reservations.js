@@ -10,7 +10,7 @@ module.exports = (sequelize, DataTypes) => {
         as : "reservas",
         foreignKey : "userId"
       }),
-      Reservations.hasOne(models.Cancha,{
+      Reservations.belongsTo(models.Cancha,{
         as : "canchas",
         foreignKey : "canchasId"
       })
