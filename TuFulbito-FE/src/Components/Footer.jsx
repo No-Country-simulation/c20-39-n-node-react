@@ -2,9 +2,11 @@
 
 const Footer = () => {
   return (
-    <div style={{backgroundColor: 'black', color: '#fff'}}>
+    <footer style={{backgroundColor: 'black', color: '#fff', display: 'flex', flexDirection: 'column', marginTop: '4em'}}>
       <h2>Todos los derechos reservados ©</h2>
-    </div>
+      <a href="#">Terminos y condiciones</a>
+      <a href="#">Avisos legales</a>
+    </footer>
   )
 }
 
