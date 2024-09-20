@@ -30,8 +30,10 @@ const Login = () => {
       })
         .then((data) => {
           setResponse(data); 
+          console.log('Usuario logueado:', data.user);
         })
         .catch((error) => console.error('Error:', error));
+        
 
     }
 

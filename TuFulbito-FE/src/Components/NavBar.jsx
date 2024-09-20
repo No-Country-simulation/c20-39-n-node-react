@@ -12,6 +12,7 @@ const NavBar = () => {
             <li><Link to='/contact' style={{color: '#fff'}}>Contacto</Link></li>
             <li><Link to='/about' style={{color: '#fff'}}>Sobre Nosotros</Link></li>
             <li><Link to='/Login' style={{color: '#fff'}}>Iniciar sesión</Link></li>
+            <li><Link to='/Register' style={{color: '#fff'}}>Registrarse</Link></li>
         </ul>
     </nav>
   )
